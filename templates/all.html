@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ ctx.head(test=True) }}</title>
+    <link rel="shortcut icon" href="/{{web['logo'].val}}">
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/css.css">
+{% block head %}
+{% endblock %}
+</head>
+
+<body>
+<div class="container fullscreen">
+
+<div class="navbar navbar-light bg-light navbar-fixed-top">
+    <a href="{{ctx['GITHUB'].val}}"><img alt="About" class="navbar-right" src="/logo.png"></a>
+</div>
+
+<div class="navbar">
+    <div class="navbar-text navbar-brand"><h1>{{ctx.head(test=True)}}</h1></div>
+</div>
+
+<div class="row mh-75">
+    {% block body %}
+    {% endblock %}
+</div>
+
+</div>
+</body>
+
+<script src='/jquery.js'></script>
+<script src='/bootstrap.js'></script>
+
+</html>
